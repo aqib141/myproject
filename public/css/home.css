@@ -1,0 +1,166 @@
+body {
+    background: linear-gradient(to right, #e214a4, #86a8e7, #94e9e3); /* add background gradient */
+  }
+    
+    #container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70vh;
+    }
+    #main-heading-container {
+      width: 600px;
+  }
+    .main-heading {
+      word-wrap: break-word; /* allow text to wrap to multiple lines */
+      font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+      text-decoration: none;
+      color: #fff; 
+      text-align: left;
+      padding-left: 10px;
+      font-size: 40px; 
+      margin-top: 10px; 
+      line-height: 1.5; /* increase space between lines */
+      text-shadow: 2px 2px 4px #000000; 
+  }
+  
+  .text {
+      word-wrap: break-word; /* allow text to wrap to multiple lines */
+      font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+      text-decoration: none;
+      color: #fff; 
+      text-align: center;
+      padding-left: 10px;
+      font-size: 20px; 
+      margin-top: 10px; 
+      line-height: 1.5; /* increase space between lines */
+      text-shadow: 2px 2px 4px #000000; 
+  }
+  
+  #sign-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  #generic-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #4c2cda; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+  }
+  
+  #generic-button:hover {
+    background-color: #ce1e93;
+  }
+  
+  #generic-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  #sign-in-button,#sign-up-button,#log-out-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #4c2cda; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+  }
+  
+  #sign-in-button:hover,#sign-up-button:hover,#log-out-button:hover {
+    background-color: #ce1e93;
+  }
+  
+  #sign-in-button:active,#sign-up-button:active,#log-out-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+/* CSS styles for the form */
+form {
+    margin: 0 auto;
+    padding: 20px;
+    border: 0px solid #ccc;
+    border-radius: 10px;
+    }
+
+    #search-form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 20px;
+      border: 0px solid #ccc;
+      border-radius: 10px;
+  }
+
+    .search-button-container{
+      display: flex;
+      justify-content: center;
+    }
+    
+    #search-bar {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      width: 300px; /* change this */
+      margin:auto; /* add this */
+      flex-grow: 1; /* add this */
+    }
+    
+    #search-button {
+      position: relative; /* change this */
+      padding: 10px 15px;
+      font-size: 20px;
+      background-color: #4c2cda; /* Green */
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      float: right;
+      margin-top: 10px; /* add this */
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      transition: all 0.3s ease;
+    }
+    
+    #search-button:hover {
+      background-color: #ce1e93;
+    }
+    
+    #search-button:active {
+      transform: translateY(4px);
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    #user-count {
+      float: left;
+      margin-right: 20px;
+      word-wrap: break-word; /* allow text to wrap to multiple lines */
+      font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+      text-decoration: none;
+      color: #fff; 
+      text-align: center;
+      padding-left: 10px;
+      font-size: 20px; 
+      margin-top: 10px; 
+      line-height: 1.5; /* increase space between lines */
+      text-shadow: 2px 2px 4px #000000; 
+    }
+  
+    .highlight{
+      font-weight: bold;
+      color: rgb(104, 28, 78);
+      font-size: 25px;
+      text-shadow: none;
+  }

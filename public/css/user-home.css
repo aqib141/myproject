@@ -1,0 +1,94 @@
+#sign-text {
+    float: left;
+    margin-right: 20px;
+    word-wrap: break-word; /* allow text to wrap to multiple lines */
+    font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+    text-decoration: none;
+    color: #fff; 
+    text-align: center;
+    padding-left: 10px;
+    font-size: 20px; 
+    margin-top: 10px; 
+    line-height: 1.5; /* increase space between lines */
+    text-shadow: 2px 2px 4px #000000; 
+  }
+
+  #create-list-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #4c2cda; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+  }
+  
+  #create-list-button:hover {
+    background-color: #ce1e93;
+  }
+
+  #create-list-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  table {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #table-heading {
+    margin-right: 20px;
+    word-wrap: break-word; /* allow text to wrap to multiple lines */
+    font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+    text-decoration: none;
+    color: #fff; 
+    text-align: center;
+    padding-left: 10px;
+    font-size: 25px; 
+    margin-top: 10px; 
+    line-height: 1.5; /* increase space between lines */
+    text-shadow: 2px 2px 4px #000000; 
+  }
+
+  #list-text {
+    margin-right: 20px;
+    word-wrap: break-word; /* allow text to wrap to multiple lines */
+    font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+    text-decoration: none;
+    color: #fff; 
+    text-align: center;
+    padding-left: 10px;
+    font-size: 15px; 
+    margin-top: 10px; 
+    line-height: 1.5; /* increase space between lines */
+    text-shadow: 2px 2px 4px #000000; 
+  }
+
+  thead th {
+    color: #333;
+    padding: 8px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 5px solid #4c2cda;
+}
+  
+  td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  #list-table td:hover {
+    background-color: #4c2cda;
+    cursor: pointer;
+  }
+  
+  
+  .list-item {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+  }

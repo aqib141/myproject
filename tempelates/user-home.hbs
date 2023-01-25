@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/rerouting.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Home</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link rel="stylesheet" type="text/css" href="css/user-home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main-heading-container">
+      <a href="/" class="main-heading" id="subscription-link">A place for your email subscriptions!</a>
+      <div id="sign-container">
+        <span id="sign-text">Welcome, {{firstname}}</span>
+        <button id="create-list-button" >+ List</button>
+        <button id="log-out-button" >Log Out</button>
+      </div>
+    </div>
+    <div id="container">
+      <table id="list-table">
+        <thead>
+          <tr>
+            <th colspan="4" id="table-heading">Lists</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each lists as |list index|}}
+            {{#if (eq (mod index 4) 0)}}
+            <tr>
+            {{/if}}
+              <td>
+                <a href="/{{username}}/{{this.listname}}">
+                <div class="list-item" id="list-text">
+                  {{this.listname}}
+                </div>
+                </a>
+              </td>
+              {{#if (eq (mod (add index 1) 4) 0)}}
+            </tr>
+            {{/if}}
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+      if (`${{username}}`.length > 1){
+        const firstname_value = "firstname=" + `${{firstname}}`.substring(1) + ";";
+        document.cookie = firstname_value;
+        const lastname_value = "lastname=" + `${{lastname}}`.substring(1) + ";";
+        document.cookie = lastname_value;
+        const username_value = "username=" + `${{username}}`.substring(1) + ";";
+        document.cookie = username_value;
+        const email_value = "email=" + `${{email}}`.substring(1) + ";";
+        document.cookie = email_value;
+        const phone_value = "phone=" + `${{phone}}`.substring(1) + ";";
+        document.cookie = phone_value;
+      }
+    </script> 
+  </body>
+</html>

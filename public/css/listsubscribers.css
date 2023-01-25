@@ -1,0 +1,40 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+}
+
+td {
+    word-wrap: break-word; /* allow text to wrap to multiple lines */
+      font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+      text-decoration: none;
+      color: #fff; 
+      padding-left: 10px;
+      font-size: 14px; 
+      margin-top: 10px; 
+      line-height: 1.5; /* increase space between lines */
+      text-shadow: 2px 2px 4px #000000; 
+}
+
+#subscriber-table{
+    position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 20px;
+      border: 0px solid #ccc;
+      border-radius: 10px;
+}

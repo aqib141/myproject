@@ -1,0 +1,21 @@
+#subscribe-text {
+    float: left;
+    margin-right: 20px;
+    word-wrap: break-word; /* allow text to wrap to multiple lines */
+    font-family: 'Montserrat', sans-serif; /* use Montserrat font */
+    text-decoration: none;
+    color: #fff; 
+    text-align: center;
+    padding-left: 10px;
+    font-size: 20px; 
+    margin-top: 10px; 
+    line-height: 1.5; /* increase space between lines */
+    text-shadow: 2px 2px 4px #000000; 
+  }
+
+  .highlight{
+    font-weight: bold;
+    color: rgb(104, 28, 78);
+    font-size: 25px;
+    text-shadow: none;
+}

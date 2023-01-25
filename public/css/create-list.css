@@ -1,0 +1,50 @@
+#create-list-container {
+    display: flex;
+    align-items: center;
+    height: 70vh; /* or any desired height value */
+  }
+  
+  #form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+  
+  
+  #list-name {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  #submit-button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #4c2cda;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+  }
+  
+  #submit-button:hover {
+    background-color: #ce1e93;
+  }
+
+  #submit-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  #firstname {
+    margin-right: 20px;
+  }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/rerouting.js"></script>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main-heading-container">
+        <a href="/" class="main-heading" id="subscription-link">A place for your email subscriptions!</a>
+        <div id="sign-container">
+            <button id="sign-up-button" >Sign Up</button>
+        </div>
+    </div>
+    <div id="login-container">
+    <div id="login">
+    <form id="login-form" method="post" action="/login">
+      <input type="text" id="username" name="username" placeholder="username">
+      <input type="password" id="password" name="password" placeholder="password">
+      <input type="submit" value="Submit" id="generic-button">
+    </form>
+    </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

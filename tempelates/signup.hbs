@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="js/rerouting.js"></script>
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="main-heading-container">
+        <a href="/" class="main-heading" id="subscription-link">A place for your email subscriptions!</a>
+        <div id="sign-container">
+            <button id="sign-in-button" >Sign In</button>
+          </div>
+      </div>
+    <div id="sign-up-container">
+      <div id="sign-up">
+        <form id="signup-form" method="post" action="/signup">
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" id="username" name="username" placeholder="username"><br>
+                </div>
+                <div class="col-6">
+                    <input type="email" id="email" name="email" placeholder="email"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <input type="text" id="firstname" name="firstname" placeholder="first name"><br>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="lastname" name="lastname" placeholder="last name"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <input type="tel" id="phone" name="phone" placeholder="phone"><br>
+                </div>
+                <div class="col-12">
+                    <input type="password" id="password" name="password" placeholder="password"><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <input type="submit" id="submit-button" value="Sign Up">
+                </div>
+            </div>
+        </form>
+      </div>
+    </div> 
+    <script src="js/script.js"></script> 
+  </body>
+</html>

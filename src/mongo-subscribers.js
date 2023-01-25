@@ -23,7 +23,7 @@ const subscriberSchema=new mongoose.Schema({
     },
     subscriber_name:{
         type:String,
-        required:true
+        required:false
     }
 })
 

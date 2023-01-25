@@ -27,11 +27,11 @@ const logInSchema=new mongoose.Schema({
     },
     lastname:{
         type:String,
-        required:true
+        required:false
     },
     phone:{
         type:String,
-        required:true
+        required:false
     }
 })
 

@@ -6,7 +6,7 @@ const LogInCollection = require("./mongo")
 const ListCollection = require("./mongo-lists")
 const SubscriberCollection = require("./mongo-subscribers")
 const cookie = require('cookie')
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 80
 app.use(express.json())
 
 app.use(express.urlencoded({ extended: false }))

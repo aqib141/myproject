@@ -6,6 +6,10 @@ const LogInCollection = require("./mongo")
 const ListCollection = require("./mongo-lists")
 const SubscriberCollection = require("./mongo-subscribers")
 const cookie = require('cookie')
+const cloudflare = require('cloudflare-express');
+
+app.use(cloudflare.restore());
+
 const port = process.env.PORT || 80
 app.use(express.json())
 

@@ -37,4 +37,26 @@ td {
       padding: 20px;
       border: 0px solid #ccc;
       border-radius: 10px;
+      margin-top: 100px;
 }
+
+#send-mail-button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #4c2cda; /* Green */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+  }
+  
+  #send-mail-button:hover {
+    background-color: #ce1e93;
+  }
+  
+ #send-mail-button:active {
+    transform: translateY(4px);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }

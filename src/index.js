@@ -240,12 +240,14 @@ app.post('/send-mail', async (req, res) => {
     for (var i = 0; i < subscriberlist.length; i++) {
         var subscriber = subscriberlist[i];
         var subscriberEmail = subscriber.subscriber_email;
+            console.log(subscriberEmail)
             const mailOptions = {
                 from: user,
                 to: subscriberEmail,
                 subject: req.body.subject,
                 text: req.body.body + "\n" + "Regards " + req.body.owner
               };
+              console.log(mailOptions)
               transporter.sendMail(mailOptions, function(error, info){
                 if (error) {
                   console.log(error);

@@ -231,6 +231,8 @@ app.post('/send-mail', async (req, res) => {
     const password = "<password>"
     const transporter = nodemailer.createTransport({
         service: 'godaddy',
+        host: 'smtpout.secureserver.net',
+        port: 25,
         auth: {
           user: user,
           pass: password

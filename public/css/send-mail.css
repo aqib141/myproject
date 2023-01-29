@@ -1,0 +1,23 @@
+input[type="text"], textarea {
+  width: 500px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+    resize: both;
+    overflow: auto;
+}
+#body{
+height: 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 50px auto;
+  }
+  

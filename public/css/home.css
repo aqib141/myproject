@@ -64,7 +64,7 @@ body {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
   
-  #sign-in-button,#sign-up-button,#log-out-button {
+  #sign-in-button,#sign-up-button,#log-out-button, #send-mail-button {
     padding: 10px 20px;
     font-size: 20px;
     background-color: #4c2cda; /* Green */
@@ -76,11 +76,11 @@ body {
     transition: all 0.3s ease;
   }
   
-  #sign-in-button:hover,#sign-up-button:hover,#log-out-button:hover {
+  #sign-in-button:hover,#sign-up-button:hover,#log-out-button:hover,#send-mail-button:hover {
     background-color: #ce1e93;
   }
   
-  #sign-in-button:active,#sign-up-button:active,#log-out-button:active {
+  #sign-in-button:active,#sign-up-button:active,#log-out-button:active,#send-mail-button:active {
     transform: translateY(4px);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }

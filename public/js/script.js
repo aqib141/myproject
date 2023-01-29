@@ -79,7 +79,8 @@ try{
 
 try{
   document.getElementById('send-mail-button').addEventListener('click', (event) => {
-    window.location.href = window.location.href + `/send-mail`;
+    console.log("reroute")
+    // window.location.href = window.location.href + `/send-mail`;
   });
 }catch{
     console.log("No button called send-mail")

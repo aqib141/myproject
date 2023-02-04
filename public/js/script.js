@@ -3,14 +3,12 @@ try {
         window.location.href = "signup";
     });
 } catch (error) {
-    console.log("Error: Button not found. Make sure the button ID is correct.");
 }
 try {
     document.getElementById("sign-in-button").addEventListener("click", function(){
         window.location.href = "login";
     });
 } catch (error) {
-    console.log("Error: Button not found. Make sure the button ID is correct.");
 }
 try {
     document.getElementById("log-out-button").addEventListener("click", async function(){
@@ -29,14 +27,12 @@ try {
         window.location.href = "/";
     });
 } catch (error) {
-    console.log("Error: Button not found. Make sure the button ID is correct.");
 }
 try {
     document.getElementById("create-list-button").addEventListener("click", function(){
         window.location.href = "create-list";
     });
 } catch (error) {
-    console.log("Error: Button not found. Make sure the button ID is correct.");
 }
 function getCookie(cname) {
     var name = cname + "=";
@@ -65,7 +61,6 @@ try{
     var phone = getCookie("phone");
     document.getElementById("phone").innerHTML = phone;
 } catch (error) {
-    console.log("Cookie could not be retrieved!");
 }
 
 try{
@@ -74,7 +69,6 @@ try{
         document.getElementById("username").value = getCookie("username");
     // });
 } catch (error) {
-    console.log("No list create form to fill");
 }
 
 try{
@@ -83,8 +77,17 @@ try{
     window.location.href = window.location.href + `/send-mail`;
   });
 }catch{
-    console.log("No button called send-mail")
 }
+
+function myFunction() {
+    var copyText = document.getElementById("emails");
+    let str = copyText.value;
+    str = str.replace(/\.com/g, ".com ");
+    copyText.select();
+    navigator.clipboard.writeText(str); 
+    let message = document.getElementById("message");
+    message.innerHTML = "Emails copied"; 
+  }
 
 
 

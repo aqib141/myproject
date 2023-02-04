@@ -51,21 +51,21 @@ app.get('/create-list', (req, res) => {
     res.render('create-list')
 })
 
-app.get('/:username/:listname/send-mail', async (req, res, next) => {
-    req.cookies = cookie.parse(req.headers.cookie || '');
-    const loggedUser = req.cookies.username;
-    if (req.params.username!=loggedUser){
-        res.send("You don't have necessary credentials to perform this action!!")
-    }else{
-        const userlists = await ListCollection.findOne({ username: req.params.username,listname: req.params.listname })
-        const checking_username = await LogInCollection.findOne({ username:req.params.username })
-        if (userlists && checking_username){
-            res.render("send-mail", { owner: req.params.username, 
-                                    listname: req.params.listname
-                                    })
-        }
-    }
-});
+// app.get('/:username/:listname/send-mail', async (req, res, next) => {
+//     req.cookies = cookie.parse(req.headers.cookie || '');
+//     const loggedUser = req.cookies.username;
+//     if (req.params.username!=loggedUser){
+//         res.send("You don't have necessary credentials to perform this action!!")
+//     }else{
+//         const userlists = await ListCollection.findOne({ username: req.params.username,listname: req.params.listname })
+//         const checking_username = await LogInCollection.findOne({ username:req.params.username })
+//         if (userlists && checking_username){
+//             res.render("send-mail", { owner: req.params.username, 
+//                                     listname: req.params.listname
+//                                     })
+//         }
+//     }
+// });
 
 app.get('/:username/:listname', async (req, res, next) => {
 
@@ -87,9 +87,15 @@ app.get('/:username/:listname', async (req, res, next) => {
         if (userlists && checking_username){
     
             const subscriberlist = await SubscriberCollection.find({ owner: req.params.username,listname: req.params.listname })
+            let copyEmails = '';
+
+            subscriberlist.forEach(function(sub) {
+            copyEmails += `${sub.subscriber_email}`;
+            });
             res.render("listsubscribers", { owner: req.params.username, 
                                             listname: req.params.listname,
-                                            subscribers: subscriberlist})
+                                            subscribers: subscriberlist,
+                                            copiedEmails: copyEmails})
         }
         else {
             res.send("No such list exists!!")
@@ -226,40 +232,40 @@ app.post('/subscribe-list', async (req, res) => {
 
 })
 
-app.post('/send-mail', async (req, res) => {
-    const user = "<user>"
-    const password = "<password>"
-    const transporter = nodemailer.createTransport({
-        service: 'godaddy',
-        host: 'smtpout.secureserver.net',
-        port: 25,
-        auth: {
-          user: user,
-          pass: password
-        }
-      });
-    const subscriberlist = await SubscriberCollection.find({ owner: req.body.owner,listname: req.body.listname })
-    for (var i = 0; i < subscriberlist.length; i++) {
-        var subscriber = subscriberlist[i];
-        var subscriberEmail = subscriber.subscriber_email;
-            console.log(subscriberEmail)
-            const mailOptions = {
-                from: user,
-                to: subscriberEmail,
-                subject: req.body.subject,
-                text: req.body.body + "\n" + "Regards " + req.body.owner
-              };
-              console.log(mailOptions)
-              transporter.sendMail(mailOptions, function(error, info){
-                if (error) {
-                  console.log(error);
-                } else {
-                  console.log('Email sent: ' + info.response);
-                }
-              });        
-      }
-    res.redirect("user-home")
-})
+// app.post('/send-mail', async (req, res) => {
+//     const user = "<user>"
+//     const password = "<password>"
+//     const transporter = nodemailer.createTransport({
+//         service: 'godaddy',
+//         host: 'smtpout.secureserver.net',
+//         port: 25,
+//         auth: {
+//           user: user,
+//           pass: password
+//         }
+//       });
+//     const subscriberlist = await SubscriberCollection.find({ owner: req.body.owner,listname: req.body.listname })
+//     for (var i = 0; i < subscriberlist.length; i++) {
+//         var subscriber = subscriberlist[i];
+//         var subscriberEmail = subscriber.subscriber_email;
+//             console.log(subscriberEmail)
+//             const mailOptions = {
+//                 from: user,
+//                 to: subscriberEmail,
+//                 subject: req.body.subject,
+//                 text: req.body.body + "\n" + "Regards " + req.body.owner
+//               };
+//               console.log(mailOptions)
+//               transporter.sendMail(mailOptions, function(error, info){
+//                 if (error) {
+//                   console.log(error);
+//                 } else {
+//                   console.log('Email sent: ' + info.response);
+//                 }
+//               });        
+//       }
+//     res.redirect("user-home")
+// })
 
 app.listen(port, () => {
     console.log('port connected');

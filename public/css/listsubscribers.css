@@ -40,7 +40,7 @@ td {
       margin-top: 100px;
 }
 
-#send-mail-button {
+#copy-mail-button {
     padding: 10px 20px;
     font-size: 20px;
     background-color: #4c2cda; /* Green */
@@ -52,11 +52,20 @@ td {
     transition: all 0.3s ease;
   }
   
-  #send-mail-button:hover {
+  #copy-mail-button:hover {
     background-color: #ce1e93;
   }
   
- #send-mail-button:active {
+ #copy-mail-button:active {
     transform: translateY(4px);
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
+
+  #copy-button-div {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
